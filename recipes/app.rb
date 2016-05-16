@@ -61,7 +61,7 @@ else
   end
 end
 
-template "#{node['wordpress']['dir']}/wp-config.php" do
+template "#{node['wordpress']['parent_dir']}/wp-config.php" do
   source 'wp-config.php.erb'
   mode node['wordpress']['config_perms']
   variables(
